@@ -1,0 +1,16 @@
+[build]
+nixpacks = true
+
+[deploy]
+startCommand = "gunicorn app:app --bind 0.0.0.0:${PORT}"
+
+[apt]
+packages = [
+    "libgl1",
+    "libglib2.0-0",
+    "libglvnd0",
+    "libglx0",
+    "libxext6",
+    "libxrender1"
+]
+
