@@ -68,7 +68,7 @@ repair_suggestions = {
 def run_detection(image_path):
     """Runs YOLO detection and returns result filename, defects, repair info, and total cost."""
 
-    results = model.predict(image_path, imgsz=640, conf=0.3, save=True)
+    results = model.predict(image_path, imgsz=320, conf=0.3, save=True)
 
     # ---- Save output image ----
     output_filename = "result_" + os.path.basename(image_path)
